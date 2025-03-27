@@ -8,8 +8,8 @@ export const getData: FetchProduct = async (search) => {
     params: {
       limit: 10,
       select: "id,title,category",
-      ...(search ? { q: search } : null),
-    },
+      ...(search ? { q: search } : null)
+    }
   });
 
   return res.data;
@@ -17,7 +17,7 @@ export const getData: FetchProduct = async (search) => {
 
 export const postData = async (title: string) => {
   const res = await axios.post(`${apiUrl}/products/add`, {
-    title,
+    title
   });
   return res.data;
 };
