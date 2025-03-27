@@ -11,4 +11,4 @@ export interface IProduct {
   category: string;
 }
 
-export type FetchProduct = (search: string) => Promise<IGetDataProduct>;
+export type FetchProduct = ({ search }: string) => Promise<IGetDataProduct>;
